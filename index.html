@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Создание лида с помощью Rest-API Битрикс24</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row  mt-5 mb-5">
+            <div class="col">
+                <h1 class="bd-title">Форма создания лида в Битрикс24 через Rest-API</h1>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" class="form-control client-name" id="name" placeholder="Ваше имя...">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="text" class="form-control client-phone" id="phone"
+                            placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Комментарий</label>
+                        <input type="text" class="form-control client-comment" id="comment">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="special-invoice">
+                            <input type="checkbox" class="special-invoice" id="special-invoice" value="Y">
+                            Мне нужен спецсчет для госторгов
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="bx-lead-agreement">
+                            <input type="checkbox" class="bx-lead-agreement" id="bx-lead-agreement" value="Y">
+                            Я даю <a
+                                href="http://www.consultant.ru/law/podborki/soglasie_na_obrabotku_personalnyh_dannyh/"
+                                target="_blank">согласие на обработку моих персональных данных</a>
+                        </label>
+                    </div>
+                    <input type="hidden" class="client-tariff" value="Стандарт">
+                    <input type="hidden" class="ym-target" value="ym_form_id">
+                    <button type="button" class="btn btn-primary" id="bx_create_lead">Подобрать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="notification" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
